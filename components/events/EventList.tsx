@@ -8,7 +8,7 @@ const EventList: React.FC<{ items: DUMMY_EVENTS_INTERFACE[] }> = ({
   return (
     <ul>
       {items.map((event) => (
-        <EventItem item={event} />
+        <EventItem key={event.id} item={event} />
       ))}
     </ul>
   );
