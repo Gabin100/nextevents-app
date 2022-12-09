@@ -1,10 +1,10 @@
 import classes from './error-alert.module.css';
 
-type EventContentProps = {
+type ErrorAlertProps = {
   children: React.ReactNode;
 };
 
-function ErrorAlert(props: EventContentProps) {
+function ErrorAlert(props: ErrorAlertProps) {
   return <div className={classes.alert}>{props.children}</div>;
 }
 
