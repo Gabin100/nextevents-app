@@ -4,7 +4,7 @@ import classes from './styles/button.module.css';
 
 type ButtonProps = {
   link?: string;
-  onClick?: () => any;
+  onClick?: (params?: any) => any;
   children: React.ReactNode;
 };
 
