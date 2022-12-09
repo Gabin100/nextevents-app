@@ -3,16 +3,24 @@ import React from 'react';
 import classes from './styles/button.module.css';
 
 type ButtonProps = {
-  link: string;
+  link?: string;
+  onClick?: () => any;
   children: React.ReactNode;
 };
 
-const Button: React.FC<ButtonProps> = ({ children, link }) => {
+const Button: React.FC<ButtonProps> = ({ children, link, onClick }) => {
+  if (link) {
+    return (
+      <Link href={link} className={classes.btn}>
+        {' '}
+        {children}
+      </Link>
+    );
+  }
   return (
-    <Link href={link} className={classes.btn}>
-      {' '}
+    <button className={classes.btn} onClick={onClick}>
       {children}
-    </Link>
+    </button>
   );
 };
 
